@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Therapist</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="app">
+        <header>
+    <div>
+        <h1>Tab Therapist</h1>
+        <p>Let's talk about your tabs!</p>
+    </div>
+    </header>
+    <section class="health-card">
+        <div class="health-title">
+            <span>Tab Health</span>
+            <span id="healthScore">--</span>
+        </div>
+        <div class="progress">
+            <div id="healthBar"></div>
+        </div>
+        <p id="healthMessage">Analyzing your browser...</p>
+    </section>
+
+    <section class="stats">
+        <div class="stat">
+            <strong id="tabCount">0</strong>
+            <span>Open Tabs</span>
+        </div>
+        <div class = "stat">
+            <strong id="duplicateCount">0</strong>
+            <span>Duplicates</span>
+        </div>
+        <div class="stat">
+            <strong id="inactiveCount">0</strong>
+            <span>Inactive</span>
+        </div>
+    </section>
+    <section class="actions">
+        <button id="cleanupBtn" class="primary">
+            Clean My Tabs
+        </button>
+
+        <button id="organizeBtn">
+            Organize My Tabs
+        </button>
+        <button id="saveAllBtn">
+            Save All Tabs
+        </button>
+    </section>
+    <section class="recommendation">
+        <h2> Therapist Says</h2>
+
+        <p id="recommendation">
+            Let's see how you're doing...
+        </p>
+    </section>
+
+    <section class="tab-section">
+        <div class="section-header">
+            <h2>Your Tabs</h2>
+            <button id="refreshBtn">↻</button>
+        </div>
+
+        <div id="tabsList"></div>
+
+    </section>
+
+    <section class="saved-section">
+        <div class="section-header">
+            <h2>Saved Tabs</h2>
+        </div>
+        <div id="savedTabsList"></div>
+
+    </section>
+    </div>
+<script src="popup.js"></script>
+</body>
+</html>
