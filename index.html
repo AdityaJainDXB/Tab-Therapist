@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tab Therapist</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f6f4ff;
+            color: #252338;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 50px 25px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 0 0 5px;
+        }
+
+        header p {
+            color: #77738b;
+            font-size: 18px;
+        }
+
+        .github-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 20px;
+            background: #7161ef;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        .github-button:hover {
+            opacity: 0.85;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 25px rgba(50, 40, 100, 0.08);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #302c45;
+        }
+
+        .step {
+            margin: 20px 0;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #7161ef;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        code {
+            background: #f0eef8;
+            padding: 3px 7px;
+            border-radius: 6px;
+        }
+
+        pre {
+            background: #252338;
+            color: white;
+            padding: 18px;
+            border-radius: 12px;
+            overflow-x: auto;
+        }
+
+        a {
+            color: #7161ef;
+            font-weight: 600;
+        }
+
+        .warning {
+            background: #fff4d6;
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            color: #77738b;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>🧠 Tab Therapist</h1>
+
+        <p>
+            Your personal therapist for browser tabs.
+        </p>
+
+        <a
+            class="github-button"
+            href="https://github.com/AdityaJainDXB/Tab-Therapist"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            📦 View Tab Therapist on GitHub
+        </a>
+    </header>
+
+
+    <div class="card">
+
+        <h2>What is Tab Therapist?</h2>
+
+        <p>
+            Tab Therapist is a Chrome extension designed to help you
+            manage your browser tabs and keep your browser organized.
+        </p>
+
+        <p>It can:</p>
+
+        <ul>
+            <li>📊 Analyze your open tabs</li>
+            <li>🩺 Give your tabs a health score</li>
+            <li>🔍 Detect duplicate tabs</li>
+            <li>🧹 Clean duplicate tabs</li>
+            <li>🗂️ Organize tabs into groups</li>
+            <li>💾 Save tabs for later</li>
+            <li>💬 Give humorous recommendations</li>
+        </ul>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>⬇️ How to Download & Install</h2>
+
+        <p>
+            Tab Therapist is currently available as an
+            <strong>unpacked Chrome extension</strong>.
+        </p>
+
+
+        <div class="step">
+
+            <span class="step-number">1</span>
+            <strong>Open the GitHub repository</strong>
+
+            <p>
+                Click the button below to open the official Tab Therapist
+                GitHub repository.
+            </p>
+
+            <p>
+                <a
+                    href="https://github.com/AdityaJainDXB/Tab-Therapist"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Open Tab Therapist on GitHub →
+                </a>
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <span class="step-number">2</span>
+            <strong>Download the project</strong>
+
+            <p>
+                On GitHub, click the green
+                <strong>Code</strong> button and select
+                <strong>Download ZIP</strong>.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <span class="step-number">3</span>
+            <strong>Extract the ZIP</strong>
+
+            <p>
+                Find the downloaded ZIP file and extract it.
+                You should have a folder containing:
+            </p>
+
+            <pre>manifest.json
+popup.html
+popup.css
+popup.js
+icon.jpeg
+index.html</pre>
+
+        </div>
+
+
+        <div class="step">
+
+            <span class="step-number">4</span>
+            <strong>Open Chrome Extensions</strong>
+
+            <p>
+                Open Google Chrome and enter:
+            </p>
+
+            <pre>chrome://extensions</pre>
+
+        </div>
+
+
+        <div class="step">
+
+            <span class="step-number">5</span>
+            <strong>Enable Developer Mode</strong>
+
+            <p>
+                Turn on <strong>Developer mode</strong>
+                using the switch in the top-right corner.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <span class="step-number">6</span>
+            <strong>Load Tab Therapist</strong>
+
+            <p>
+                Click <strong>Load unpacked</strong>.
+            </p>
+
+            <p>
+                Select the folder you extracted in Step 3.
+                Make sure the folder contains
+                <code>manifest.json</code>.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <span class="step-number">7</span>
+            <strong>You're done!</strong>
+
+            <p>
+                Tab Therapist should now appear in your Chrome extensions.
+                Click the puzzle-piece icon 🧩 in Chrome and pin
+                <strong>Tab Therapist</strong> for easy access.
+            </p>
+
+        </div>
+
+
+        <div class="warning">
+
+            <strong>⚠️ Important:</strong>
+
+            This is a developer/unpacked installation.
+            Chrome may display a message saying that developer mode
+            extensions are enabled. This is normal for this installation
+            method.
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>🛠️ Requirements</h2>
+
+        <ul>
+            <li>Google Chrome</li>
+            <li>Developer Mode enabled</li>
+            <li>The Tab Therapist project folder</li>
+        </ul>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>🚀 Project Status</h2>
+
+        <p>
+            Tab Therapist is currently an early version and is being
+            actively developed.
+        </p>
+
+        <p>
+            Future improvements may include smarter tab organization,
+            improved analytics, and additional productivity features.
+        </p>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            Made with ❤️ for people who have way too many tabs.
+        </p>
+
+        <p>
+            © 2026 Tab Therapist
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+</html>
