@@ -39,21 +39,7 @@ No external server or account is required for the extension to function.
 📦 Installation
 From the Chrome Web Store
 Coming soon.
-From Source
-Clone this repository:
-git clone https://github.com/YOUR-USERNAME/tab-therapist.git
-Open Chrome and navigate to:
-chrome://extensions
-Enable Developer mode.
-Click Load unpacked.
-Select the cloned Tab Therapist folder.
-The folder should contain:
-Tab Therapist/
-├── manifest.json
-├── popup.html
-├── popup.css
-├── popup.js
-└── icon.png
+
 🚀 Roadmap
 Future improvements may include:
 
