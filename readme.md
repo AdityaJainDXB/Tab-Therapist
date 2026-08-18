@@ -38,7 +38,35 @@ Saved tabs are stored using Chrome's local storage.
 No external server or account is required for the extension to function.
 📦 Installation
 From the Chrome Web Store
-Coming soon.
+Coming soon. (I need 5 Dollars for it)
+
+1. Download the project
+Go to the GitHub repository and click:
+Code → Download ZIP
+Then extract the ZIP somewhere on your computer.
+2. Open Chrome Extensions
+Open Chrome and enter:
+chrome://extensions
+3. Turn on Developer Mode
+In the top-right corner, turn on:
+Developer mode
+4. Load Tab Therapist
+Click:
+Load unpacked
+Select the Tab Therapist folder that you extracted.
+Important: Select the folder that directly contains manifest.json.
+It should look like:
+Tab Therapist/
+├── manifest.json
+├── popup.html
+├── popup.css
+├── popup.js
+└── icon.png
+Chrome will then install Tab Therapist locally. Chrome for Developers
+5. Open Tab Therapist
+Click the Extensions 🧩 button in Chrome's toolbar.
+Find Tab Therapist and click the pin 📌 button.
+Then click the Tab Therapist icon to open it.
 
 🚀 Roadmap
 Future improvements may include:
