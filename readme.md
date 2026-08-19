@@ -1,95 +1,171 @@
-🧠 Tab Therapist
-Your personal therapist for browser tabs.
+# Tab Therapist
 
-Tab Therapist is a lightweight Chrome extension designed to help you manage browser-tab chaos without the stress. It analyzes your open tabs, detects duplicates, calculates a Tab Health Score, gives you recommendations, and helps organize and save tabs for later.
-✨ Features
-🩺 Tab Health Score — Get a quick score based on your current tab habits.
-🔍 Duplicate Detection — Find duplicate pages across your open tabs.
-🧹 Clean My Tabs — Remove duplicate tabs with one click.
-🗂️ Organize My Tabs — Automatically group tabs into categories such as:School
-Work
-Entertainment
-Shopping
-Other
+Tab Therapist is a Chrome extension I made to help with a problem I have pretty often: having way too many tabs open.
 
-💾 Save Tabs — Save important tabs for later.
-📂 Saved Tabs — Reopen or delete previously saved tabs.
-💬 Therapist Recommendations — Get friendly advice based on your browser habits.
-🔄 Refresh — Quickly update your tab statistics.
-🎯 Why Tab Therapist?
-We've all been there:
-47 tabs open.
-6 copies of the same Google Doc.
-12 tabs you swear you'll read later.
+When I am working on school work or coding, I can easily end up with dozens of tabs open. Sometimes I have the same page open multiple times, and other times I have tabs that I want to keep but don't need open right now.
 
-Tab Therapist turns that mess into something manageable.
-Instead of manually searching through dozens of tabs, the extension gives you a simple overview of your browser and tools to clean it up.
-🛠️ Built With
-HTML
-CSS
-JavaScript
-Chrome Extensions API
-Chrome Storage API
-Chrome Tab Groups API
-🔐 Privacy
-Tab Therapist is designed with privacy in mind.
-The extension uses Chrome's APIs to access your open tabs so that it can provide its core functionality, including duplicate detection, organization, and saving tabs.
-Saved tabs are stored using Chrome's local storage.
-No external server or account is required for the extension to function.
-📦 Installation
-From the Chrome Web Store
-Coming soon. (I need 5 Dollars for it)
+I made Tab Therapist to make managing this easier.
 
-1. Download the project
-Go to the GitHub repository and click:
-Code → Download ZIP
-Then extract the ZIP somewhere on your computer.
-2. Open Chrome Extensions
-Open Chrome and enter:
-chrome://extensions
-3. Turn on Developer Mode
-In the top-right corner, turn on:
-Developer mode
-4. Load Tab Therapist
-Click:
-Load unpacked
-Select the Tab Therapist folder that you extracted.
-Important: Select the folder that directly contains manifest.json.
-It should look like:
-Tab Therapist/
+## What it does
+
+Tab Therapist looks at the tabs that are currently open and gives you some tools to manage them.
+
+### Tab Health Score
+
+The extension gives your current tabs a score based on things like the number of tabs you have open and duplicate tabs.
+
+The idea is to give you a quick way to see how messy your current browser session is.
+
+### Duplicate Detection
+
+Tab Therapist checks your open tabs for duplicate URLs.
+
+If you have the same page open multiple times, it can identify those duplicates so you don't have to manually look through every tab.
+
+### Clean My Tabs
+
+This lets you remove duplicate tabs.
+
+Instead of closing them one by one, Tab Therapist can clean them up for you.
+
+### Organize My Tabs
+
+The extension can group tabs into categories such as:
+
+- School Work
+- Entertainment
+- Shopping
+- Other
+
+This uses Chrome's tab grouping features to make large numbers of tabs easier to manage.
+
+### Save Tabs
+
+Sometimes I don't want to close a tab because I might need it later.
+
+Tab Therapist lets me save tabs and close them without losing the links.
+
+Saved tabs can then be opened again later or deleted from the saved list.
+
+### Recommendations
+
+The extension also gives simple recommendations based on the current state of your tabs.
+
+For example, if there are a lot of duplicate tabs, it can suggest cleaning them up.
+
+## Why I made it
+
+I made this project because I personally have a problem with keeping too many tabs open.
+
+I wanted to make something that was actually useful to me instead of just making a project to demonstrate a technology.
+
+I also wanted to learn more about Chrome extensions and how they can interact with the browser.
+
+## How I built it
+
+Tab Therapist is built using:
+
+- HTML
+- CSS
+- JavaScript
+- Chrome Extensions API
+- Chrome Storage API
+- Chrome Tab Groups API
+
+I used JavaScript for the main functionality and Chrome's APIs to access and manage the tabs.
+
+One of the parts I worked on was detecting duplicate tabs by comparing their URLs. I also used Chrome storage so that saved tabs can remain available after closing the extension.
+
+## Privacy
+
+Tab Therapist does not require an account or an external server.
+
+The extension uses Chrome's APIs to access the tabs needed for its features. Saved tabs are stored using Chrome's local storage.
+
+The project does not need to send your tabs to a server for it to work.
+
+## Installation
+
+The Chrome Web Store version is not available yet, so the extension currently needs to be installed manually.
+
+### 1. Download the project
+
+Download this repository using:
+
+**Code → Download ZIP**
+
+Extract the ZIP file somewhere on your computer.
+
+### 2. Open Chrome Extensions
+
+Open Chrome and go to:
+
+`chrome://extensions`
+
+### 3. Enable Developer Mode
+
+Turn on **Developer mode** in the top-right corner.
+
+### 4. Load the extension
+
+Click **Load unpacked**.
+
+Select the folder containing `manifest.json`.
+
+It should look something like:
+
+```text
+Tab-Therapist/
 ├── manifest.json
 ├── popup.html
 ├── popup.css
 ├── popup.js
 └── icon.png
-Chrome will then install Tab Therapist locally. Chrome for Developers
-5. Open Tab Therapist
-Click the Extensions 🧩 button in Chrome's toolbar.
-Find Tab Therapist and click the pin 📌 button.
+```
+
+### 5. Open Tab Therapist
+
+Click the Extensions button in Chrome, find Tab Therapist, and pin it if you want quick access.
+
 Then click the Tab Therapist icon to open it.
 
-🚀 Roadmap
-Future improvements may include:
+## What I learned
 
-More advanced tab categorization
+Building this project helped me learn more about how Chrome extensions work.
 
-Recently unused tab detection
+Some of the things I learned while making it were:
 
-Custom categories
+- Working with the Chrome Tabs API
+- Using Chrome storage
+- Working with Chrome tab groups
+- Detecting duplicate URLs with JavaScript
+- Building a popup interface for a browser extension
+- Handling permissions in a Chrome extension
+- Organizing a project into multiple files
 
-Tab search
+I also learned that making a project that seems simple can involve quite a few smaller problems once you actually start building it.
 
-Better health-score analytics
+## Future improvements
 
-Dark mode
+There are still some things I would like to add in future versions:
 
-More customization options
+- Better tab categorization
+- Custom categories
+- Tab search
+- Detection of tabs that have not been used recently
+- More detailed health-score information
+- Dark mode
+- More customization options
+- Chrome Web Store release
 
-Chrome Web Store release
-🤝 Contributing
-Contributions, suggestions, and bug reports are welcome!
-If you find a bug or have an idea for a feature, open an Issue or submit a Pull Request.
-📄 License
-This project is open source. See the repository for licensing information.
-Made with 💜 to help you close a few tabs.
-Tab Therapist — because your browser deserves therapy too.
+## Contributing
+
+If you find a bug or have an idea for improving Tab Therapist, you can open an issue or submit a pull request.
+
+## License
+
+See the license included in this repository for information about using and modifying the project.
+
+---
+
+I made Tab Therapist as a small project to solve a problem I actually have when using Chrome. It started as an idea for managing too many tabs and became a project where I could learn more about browser extensions and JavaScript.
