@@ -1,6 +1,6 @@
 # Tab Therapist
 
-Tab Therapist is a Chrome extension I made to help with a problem I have pretty often: having way too many tabs open.
+Tab Therapist is a Chrome/ Brave extension I made to help with a problem I have pretty often: having way too many tabs open.
 
 When I am working on school work or coding, I can easily end up with dozens of tabs open. Sometimes I have the same page open multiple times, and other times I have tabs that I want to keep but don't need open right now.
 
@@ -37,7 +37,7 @@ The extension can group tabs into categories such as:
 - Shopping
 - Other
 
-This uses Chrome's tab grouping features to make large numbers of tabs easier to manage.
+This uses Chrome/ Brave's tab grouping features to make large numbers of tabs easier to manage.
 
 ### Save Tabs
 
@@ -59,7 +59,7 @@ I made this project because I personally have a problem with keeping too many ta
 
 I wanted to make something that was actually useful to me instead of just making a project to demonstrate a technology.
 
-I also wanted to learn more about Chrome extensions and how they can interact with the browser.
+I also wanted to learn more about Chrome/ Brave extensions and how they can interact with the browser.
 
 ## How I built it
 
@@ -68,25 +68,25 @@ Tab Therapist is built using:
 - HTML
 - CSS
 - JavaScript
-- Chrome Extensions API
-- Chrome Storage API
-- Chrome Tab Groups API
+- Chrome/ Brave Extensions API
+- Chrome/ Brave Storage API
+- Chrome/ Brave Tab Groups API
 
-I used JavaScript for the main functionality and Chrome's APIs to access and manage the tabs.
+I used JavaScript for the main functionality and Chrome/ Brave's APIs to access and manage the tabs.
 
-One of the parts I worked on was detecting duplicate tabs by comparing their URLs. I also used Chrome storage so that saved tabs can remain available after closing the extension.
+One of the parts I worked on was detecting duplicate tabs by comparing their URLs. I also used Chrome/ Brave storage so that saved tabs can remain available after closing the extension.
 
 ## Privacy
 
 Tab Therapist does not require an account or an external server.
 
-The extension uses Chrome's APIs to access the tabs needed for its features. Saved tabs are stored using Chrome's local storage.
+The extension uses Chrome/ Brave's APIs to access the tabs needed for its features. Saved tabs are stored using Chrome/ Brave's local storage.
 
 The project does not need to send your tabs to a server for it to work.
 
 ## Installation
 
-The Chrome Web Store version is not available yet, so the extension currently needs to be installed manually.
+The Chrome/ Brave Web Store version is not available yet, so the extension currently needs to be installed manually.
 
 ### 1. Download the project
 
@@ -96,11 +96,11 @@ Download this repository using:
 
 Extract the ZIP file somewhere on your computer.
 
-### 2. Open Chrome Extensions
+### 2. Open Chrome/ Brave Extensions
 
-Open Chrome and go to:
+Open Chrome/ Brave and go to:
 
-`chrome://extensions`
+`Chrome/ Brave://extensions`
 
 ### 3. Enable Developer Mode
 
@@ -125,22 +125,22 @@ Tab-Therapist/
 
 ### 5. Open Tab Therapist
 
-Click the Extensions button in Chrome, find Tab Therapist, and pin it if you want quick access.
+Click the Extensions button in Chrome/ Brave, find Tab Therapist, and pin it if you want quick access.
 
 Then click the Tab Therapist icon to open it.
 
 ## What I learned
 
-Building this project helped me learn more about how Chrome extensions work.
+Building this project helped me learn more about how Chrome/ Brave extensions work.
 
 Some of the things I learned while making it were:
 
-- Working with the Chrome Tabs API
-- Using Chrome storage
-- Working with Chrome tab groups
+- Working with the Chrome/ Brave Tabs API
+- Using Chrome/ Brave storage
+- Working with Chrome/ Brave tab groups
 - Detecting duplicate URLs with JavaScript
 - Building a popup interface for a browser extension
-- Handling permissions in a Chrome extension
+- Handling permissions in a Chrome/ Brave extension
 - Organizing a project into multiple files
 
 I also learned that making a project that seems simple can involve quite a few smaller problems once you actually start building it.
@@ -156,7 +156,7 @@ There are still some things I would like to add in future versions:
 - More detailed health-score information
 - Dark mode
 - More customization options
-- Chrome Web Store release
+- Chrome/ Brave Web Store release
 
 ## Contributing
 
@@ -168,4 +168,4 @@ See the license included in this repository for information about using and modi
 
 ---
 
-I made Tab Therapist as a small project to solve a problem I actually have when using Chrome. It started as an idea for managing too many tabs and became a project where I could learn more about browser extensions and JavaScript.
+I made Tab Therapist as a small project to solve a problem I actually have when using Chrome/ Brave. It started as an idea for managing too many tabs and became a project where I could learn more about browser extensions and JavaScript.
