@@ -90,7 +90,7 @@ The Chrome/Brave Web Store version is not available yet, so the extension curren
 
 ### 1. Download the project
 
-Download this repository using:
+Download this repository (Specifically for Chrome and Brave use CB folder/ Currently Latest release while Firefox version is being built)  using:
 
 **Code → Download ZIP**
 
