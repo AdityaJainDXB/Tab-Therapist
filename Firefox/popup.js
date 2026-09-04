@@ -330,51 +330,80 @@ function displaySavedTabs() {
         ORGANIZATION
 ------------------------------------*/
 async function organizeTabs(){
-    // Check if Tab Grouping API is available (Chrome/Brave support it, Firefox does not)
+    // Check if Tab Grouping API is available (Chrome/Brave/Edge support it; Firefox webextensions do not natively support chrome.tabGroups)
     if (!ext.tabs.group || !ext.tabGroups) {
         alert("Tab grouping is not natively supported by Firefox.");
         return;
     }
 
     const categories = {
-        School: [
-            "google.com",
-            "docs.google.com",
-            "classroom.google.com",
-            "khanacademy.org",
-            "quizlet.com",
-            "wikipedia.org"
+        "School": [
+            "classroom.google.com", "docs.google.com", "drive.google.com",
+            "slides.google.com", "sheets.google.com", "forms.google.com",
+            "khanacademy.org", "quizlet.com", "wikipedia.org", "coursera.org",
+            "edx.org", "udemy.com", "duolingo.com", "kahoot.it", "brainly.com",
+            "quizizz.com", "chegg.com", "grammarly.com", "managebac.com", "padlet.com"
         ],
-        Work: [
-            "github.com",
-            "slack.com",
-            "notion.so",
-            "figma.com"
+        "Work": [
+            "notion.so", "slack.com", "figma.com", "trello.com", "asana.com",
+            "monday.com", "atlassian.net", "clickup.com", "miro.com", "canva.com",
+            "zoom.us", "teams.microsoft.com", "meet.google.com", "office.com"
         ],
-        Entertainment: [
-            "youtube.com",
-            "netflix.com",
-            "spotify.com",
-            "reddit.com"
+        "Dev & AI": [
+            "github.com", "gitlab.com", "stackoverflow.com", "replit.com",
+            "cursor.com", "chatgpt.com", "openai.com", "claude.ai", "perplexity.ai",
+            "huggingface.co", "npmjs.com", "developer.mozilla.org", "w3schools.com"
         ],
-        Shopping: [
-            "amazon.com",
-            "noon.com",
-            "ebay.com"
+        "Social": [
+            "x.com", "twitter.com", "instagram.com", "facebook.com", "linkedin.com",
+            "discord.com", "reddit.com", "whatsapp.com", "telegram.org", "pinterest.com",
+            "tiktok.com"
+        ],
+        "Entertainment": [
+            "youtube.com", "netflix.com", "spotify.com", "twitch.tv", "hulu.com",
+            "disneyplus.com", "primevideo.com", "soundcloud.com", "steampowered.com"
+        ],
+        "Shopping": [
+            "amazon.com", "noon.com", "ebay.com", "etsy.com", "aliexpress.com",
+            "walmart.com", "target.com", "bestbuy.com", "ikea.com"
         ]
+    };
+
+    const categoryColors = {
+        "School": "blue",
+        "Work": "green",
+        "Dev & AI": "purple",
+        "Social": "orange",
+        "Entertainment": "red",
+        "Shopping": "pink"
     };
 
     const groups = {};
 
     for (const tab of allTabs){
-        if (!tab.url) continue;
+        if (
+            !tab.url || 
+            tab.url.startsWith("chrome://") || 
+            tab.url.startsWith("chrome-extension://") ||
+            tab.url.startsWith("about:") ||
+            tab.url.startsWith("moz-extension://")
+        ) {
+            continue;
+        }
+
         let category = "Other";
 
-        for (const [name, domains] of Object.entries(categories)){
-            if (domains.some(domain => tab.url.includes(domain))){
-                category = name;
-                break;
+        try {
+            const hostname = new URL(tab.url).hostname.toLowerCase();
+
+            for (const [name, domains] of Object.entries(categories)){
+                if (domains.some(domain => hostname === domain || hostname.endsWith("." + domain))){
+                    category = name;
+                    break;
+                }
             }
+        } catch (e) {
+            // Ignore unparseable or invalid URLs
         }
 
         if (!groups[category]){
@@ -384,15 +413,17 @@ async function organizeTabs(){
     }
 
     for (const [category, tabIds] of Object.entries(groups)){
-        if (tabIds.length < 2) continue;
+        if (tabIds.length < 2 || category === "Other") continue;
+
         try {
             const groupId = await ext.tabs.group({ tabIds });
             await ext.tabGroups.update(groupId, {
                 title: category,
+                color: categoryColors[category] || "grey",
                 collapsed: false
             });
         } catch (error) {
-            console.error(error);
+            console.error(`Failed to group category "${category}":`, error);
         }
     }
     loadTabs();
