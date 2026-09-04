@@ -1,6 +1,6 @@
 # Tab Therapist
 
-Tab Therapist is a Chrome/Brave extension I made to help with a problem I have pretty often: having way too many tabs open.
+Tab Therapist is a Chrome/Brave/Firefox extension I made to help with a problem I have pretty often: having way too many tabs open.
 
 When I am working on school work or coding, I can easily end up with dozens of tabs open. Sometimes I have the same page open multiple times, and other times I have tabs that I want to keep but don't need open right now.
 
@@ -37,7 +37,7 @@ The extension can group tabs into categories such as:
 - Shopping
 - Other
 
-This uses Chrome/Brave's tab grouping features to make large numbers of tabs easier to manage.
+This uses Chrome/Brave/Firefox's tab grouping features to make large numbers of tabs easier to manage.
 
 ### Save Tabs
 
@@ -59,7 +59,7 @@ I made this project because I personally have a problem with keeping too many ta
 
 I wanted to make something that was actually useful to me instead of just making a project to demonstrate a technology.
 
-I also wanted to learn more about Chrome/Brave extensions and how they can interact with the browser.
+I also wanted to learn more about Chrome/Brave/Firefox extensions and how they can interact with the browser.
 
 ## How I built it
 
@@ -68,29 +68,29 @@ Tab Therapist is built using:
 - HTML
 - CSS
 - JavaScript
-- Chrome/Brave Extensions API
-- Chrome/Brave Storage API
-- Chrome/Brave Tab Groups API
+- Chrome/Brave/Firefox Extensions API
+- Chrome/Brave/Firefox Storage API
+- Chrome/Brave/Firefox Tab Groups API
 
-I used JavaScript for the main functionality and Chrome/Brave's APIs to access and manage the tabs.
+I used JavaScript for the main functionality and Chrome/Brave/Firefox's APIs to access and manage the tabs.
 
-One of the parts I worked on was detecting duplicate tabs by comparing their URLs. I also used Chrome/Brave storage so that saved tabs can remain available after closing the extension.
+One of the parts I worked on was detecting duplicate tabs by comparing their URLs. I also used Chrome/Chrome/Brave/Firefox storage so that saved tabs can remain available after closing the extension.
 
 ## Privacy
 
 Tab Therapist does not require an account or an external server.
 
-The extension uses Chrome/Brave's APIs to access the tabs needed for its features. Saved tabs are stored using Chrome/Brave's local storage.
+The extension uses Chrome/Chrome/Brave/Firefox's APIs to access the tabs needed for its features. Saved tabs are stored using Chrome/Chrome/Brave/Firefox's local storage.
 
 The project does not need to send your tabs to a server for it to work.
 
 ## Installation
 
-The Chrome/Brave Web Store version is not available yet, so the extension currently needs to be installed manually.
+The Chrome/Chrome/Brave/Firefox Web Store version is not available yet, so the extension currently needs to be installed manually.
 
 ### 1. Download the project
 
-Download this repository (Specifically for Chrome and Brave use CB folder/ Currently Latest release while Firefox version is being built)  using:
+Download this repository (Specifically for Chrome and Chrome/Brave/ use CB folder/Firefox version is built release shows installation guidelines)  using:
 
 **Code → Download ZIP**
 
@@ -123,6 +123,8 @@ Tab-Therapist/
 └── icon.png
 ```
 
+###NOTE FIREFOX INSTRUCTIONS SHOWN IN RELEASE!!
+
 ### 5. Open Tab Therapist
 
 Click the Extensions button in Chrome/Brave, find Tab Therapist, and pin it if you want quick access.
@@ -136,11 +138,11 @@ Building this project helped me learn more about how Chrome/Brave extensions wor
 Some of the things I learned while making it were:
 
 - Working with the Chrome/Brave Tabs API
-- Using Chrome/Brave storage
-- Working with Chrome/Brave tab groups
+- Using Chrome/Chrome/Brave/Firefox storage
+- Working with Chrome/Chrome/Brave/Firefox tab groups
 - Detecting duplicate URLs with JavaScript
 - Building a popup interface for a browser extension
-- Handling permissions in a Chrome/Brave extension
+- Handling permissions in a Chrome/Chrome/Brave/Firefox extension
 - Organizing a project into multiple files
 
 I also learned that making a project that seems simple can involve quite a few smaller problems once you actually start building it.
@@ -156,7 +158,7 @@ There are still some things I would like to add in future versions:
 - More detailed health-score information
 - Dark mode
 - More customization options
-- Chrome/Brave Web Store release
+- Chrome/Chrome/Brave/Firefox Web Store release
 
 ## Contributing
 
@@ -168,4 +170,4 @@ See the license included in this repository for information about using and modi
 
 ---
 
-I made Tab Therapist as a small project to solve a problem I actually have when using Chrome/Brave. It started as an idea for managing too many tabs and became a project where I could learn more about browser extensions and JavaScript.
+I made Tab Therapist as a small project to solve a problem I actually have when using Chrome/Chrome/Brave/Firefox. It started as an idea for managing too many tabs and became a project where I could learn more about browser extensions and JavaScript.
